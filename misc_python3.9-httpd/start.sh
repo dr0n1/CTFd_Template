@@ -7,8 +7,6 @@ FLAG=not_flag
 
 python3 /usr/local/apache2/htdocs/challenges.py
 
-rm -rf /usr/local/apache2/htdocs/index.html
-
 if [ -f /usr/local/apache2/htdocs/requirements.txt ]; then
     rm -rf /usr/local/apache2/htdocs/requirements.txt
 fi

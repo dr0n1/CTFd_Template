@@ -16,5 +16,5 @@ a.save('1.png')
 
 
 password = ''.join(random.choice('0123456789') for _ in range(8))
-pyminizip.compress("1.png", None, "flag.zip", password, 5)
+pyminizip.compress("1.png", None, "attachment.zip", password, 5)
 os.remove("1.png")
