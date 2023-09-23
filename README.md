@@ -10,19 +10,19 @@
 
 **如何使用**
 
-1：将bin目录下的test替换成你的附件
-2：修改ctf.xinetd中的server_args
+1：将bin目录下的test替换成你的附件  
+2：修改ctf.xinetd中的server_args  
 
 
-构建镜像：docker build -t <镜像名> .
+构建镜像：docker build -t <镜像名> .  
 本地运行镜像测试：docker run -itd -p <暴露端口>:9999 <镜像名> /start.sh
 
 
 **eg.**
 
-docker build -t testpwn .
-docker run -itd -p 4567:9999 testpwn /start.sh
-nc xxxx 4567
+docker build -t testpwn .  
+docker run -itd -p 4567:9999 testpwn /start.sh  
+nc xxxx 4567  
 
 
 ## web
@@ -30,7 +30,7 @@ nc xxxx 4567
 ### web_apache-php7
 
 **如何使用**
-1：src中存放题目代码
+1：src中存放题目代码  
 2：修改`start.sh`中flag导入的方式，使用echo或sed
 
 注：php.ini是从官方镜像的`/usr/local/etc/php/php.ini-production`复制出来的，修改了如下部分
@@ -62,8 +62,8 @@ session.upload_progress.enabled = Off
 
 
 **注意事项**
-1：flag值需要从`/flag`读取
-2：出题后生成的附件需要套一层压缩包以便访问自动下载，zip需要命名为`attachment.zip`
+1：flag值需要从`/flag`读取  
+2：出题后生成的附件需要套一层压缩包以便访问自动下载，zip需要命名为`attachment.zip`  
 3：目前只支持使用python2/3运行出题脚本
 
 ```python
