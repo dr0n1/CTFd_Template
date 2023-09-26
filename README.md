@@ -6,6 +6,8 @@
 
 基础镜像尽量全部使用官方镜像，保证稳定性
 
+更详细的部署过程可以参考[ctf平台搭建与出题指南](https://www.lewiserii.top/%E7%AB%9E%E8%B5%9B/ctf%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%87%BA%E9%A2%98%E6%8C%87%E5%8D%97.html#%E5%8A%A8%E6%80%81flag%E9%A2%98%E7%9B%AE%E9%83%A8%E7%BD%B2)
+
 ## pwn
 
 包含`ubuntu16`，`ubuntu18`，`ubuntu20`，`ubuntu22`四个基础镜像模板
@@ -54,7 +56,7 @@
 **注意事项**  
 1：flag值需要从`/flag`读取  
 2：出题后生成的附件需要套一层压缩包以便访问自动下载，zip需要命名为`attachment.zip`  
-3：目前只支持使用python2/3运行出题脚本
+3：尽量在脚本结束时删除无用的文件，以防非预期
 
 ```python
 flag=open('/flag').read()
@@ -66,7 +68,6 @@ flag=open('/flag').read()
 z=zipfile.ZipFile('attachment.zip','w')
 z.write('附件')
 z.close()
-
 ```
 
 
