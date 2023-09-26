@@ -1,6 +1,6 @@
 FROM python:2.7-alpine
 
-LABEL Author="lewiserii"
+LABEL Organization="Rml" Author="Lewiserii <admin@lewiserii.top>"
 
 COPY files /tmp/
 

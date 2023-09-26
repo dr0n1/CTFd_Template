@@ -1,6 +1,6 @@
 FROM httpd:2.4.54
 
-LABEL Author="lewiserii"
+LABEL Organization="Rml" Author="Lewiserii <admin@lewiserii.top>"
 
 COPY files /usr/local/apache2/htdocs/
 COPY start.sh /start.sh
