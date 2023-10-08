@@ -22,20 +22,16 @@
 
 ### apache-php
 
-包含`php7.0`等环境
-
 **如何使用**  
 1：src中存放题目代码  
-2：修改`start.sh`中flag导入的方式，使用echo或sed（可选，根据题目要求来）
+2：修改`start.sh`中flag导入的方式和位置，使用echo或sed（可选，根据题目要求来）
 
 
 ### apache-php-mysql
 
-包含`php5.4`，`php7.4`等环境
-
 **如何使用**  
 1：src中存放题目代码，db.sql是需要导入数据库的数据，也需要放在src目录下，导入完成会自动删除  
-2：可以根据题目要求来修改flag导入位置，默认更新`update ctf.flag set flag='$FLAG';`
+2：可以根据题目要求来修改`start.sh`中flag导入方式和位置，默认更新`update ctf.flag set flag='$FLAG';`
 
 
 
